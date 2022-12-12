@@ -10,7 +10,7 @@ export function WidgetAdder(props:{id: string}) {
 
     const r = useWidgetsHook();
     const addWidget = r.addWidget; 
-    //const addWidget =useAddWidget();
+    // const addWidget =useAddWidget();
 
 
     const [text, setText] = useState('');

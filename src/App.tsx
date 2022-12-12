@@ -3,22 +3,27 @@ import logo from './logo.svg';
 import './App.css';
 import { WidgetAdder } from './WidgetAdder';
 import { WidgetDisplay } from './WidgetDisplay';
-import { SpecialLikeButtonApp } from './examples/SpecialLikeButton1/App';
-import { SpecialLikeButtonApp as SpecialLikeButtonApp2} from './examples/SpecialLikeButton2/App';
-import { SpecialLikeButtonApp as SpecialLikeButtonApp3} from './examples/SpecialLikeButton3/App';
-import { SpecialLikeButtonApp as SpecialLikeButtonApp4} from './examples/SpecialLikeButton4/App';
+import { SpecialLikeButtonApp } from './examples/SpecialLikeButton/SpecialLikeButton1/App';
+import { SpecialLikeButtonApp as SpecialLikeButtonApp2} from './examples/SpecialLikeButton/SpecialLikeButton2/App';
+import { SpecialLikeButtonApp as SpecialLikeButtonApp3} from './examples/SpecialLikeButton/SpecialLikeButton3/App';
+import { SpecialLikeButtonApp as SpecialLikeButtonApp4} from './examples/SpecialLikeButton/SpecialLikeButton4/App';
+import { TodoListExample } from './examples/TodoList';
 
 
 function App() {
   return (
     <div className="App">
+
+
+        <TodoListExample/>
+
         {/* <WidgetAdder id ="1"/>
         <WidgetAdder id ="2"/>
 
         <WidgetDisplay/> */}
 
 
-        <SpecialLikeButtonApp/>
+        {/* <SpecialLikeButtonApp/>
         <SpecialLikeButtonApp2/>
         <SpecialLikeButtonApp3/>
 
@@ -42,7 +47,7 @@ function App() {
           </p>
         </div>
 
-        <SpecialLikeButtonApp4/>
+        <SpecialLikeButtonApp4/> */}
 
 
     </div>

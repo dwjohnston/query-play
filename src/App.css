@@ -36,3 +36,12 @@
     transform: rotate(360deg);
   }
 }
+
+
+
+.example-panel {
+
+  border: solid 1px black; 
+  margin: 1em; 
+  padding: 1em; 
+}
