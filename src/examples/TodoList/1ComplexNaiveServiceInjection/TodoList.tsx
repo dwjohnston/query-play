@@ -3,8 +3,6 @@ import React from 'react';
 import { preProcessFile } from 'typescript';
 import { fetchLabels, fetchTodos, fetchUserPreferences } from '../_services/services';
 
-export type TodoListProps = {
-};
 
 async function getUserPreferredTodosFn() {
 
@@ -31,10 +29,8 @@ export const ServiceContext = React.createContext({
 
 
 
-export const TodoList = (props: TodoListProps) => {
-  const { } = props;
-
-
+export const TodoList = () => {
+  
   const getUserPreferredTodos = React.useContext(ServiceContext).getUserPreferredTodos; 
   const query = useQuery({queryKey: ['preferredTodos'], queryFn: getUserPreferredTodos});
 

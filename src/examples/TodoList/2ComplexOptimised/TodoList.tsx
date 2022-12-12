@@ -6,7 +6,7 @@ import { fetchLabels, fetchTodos, fetchUserPreferences, Label, Todo, UserPrefere
 export type TodoListProps = {
 };
 
-function getUserPreferredTodos(todos?: Array<Todo>, labels?: Array<Label>, userPreferences?: UserPreferences) {
+function determineUserPreferredTodos(todos?: Array<Todo>, labels?: Array<Label>, userPreferences?: UserPreferences) {
   if(!todos || !labels || !userPreferences) {
     return []; 
   }
@@ -15,8 +15,6 @@ function getUserPreferredTodos(todos?: Array<Todo>, labels?: Array<Label>, userP
   return todos.filter((v) => preferredLabels.some((w) => w.id === v.label))
 }
 
-
-
 export const TodoList = () => {
 
   const todosQuery = useQuery({queryKey: ['todos2b'], queryFn: fetchTodos});
@@ -24,7 +22,7 @@ export const TodoList = () => {
   const labelsQuery = useQuery({queryKey: ['labels2b'], queryFn: fetchLabels});
 
 
-  const todosToShow = getUserPreferredTodos(todosQuery.data, labelsQuery.data, userPrefsQuery.data);
+  const todosToShow = determineUserPreferredTodos(todosQuery.data, labelsQuery.data, userPrefsQuery.data);
 
 
   return (

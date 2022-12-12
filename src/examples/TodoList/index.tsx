@@ -13,13 +13,14 @@ import { App as App3 } from "./3HookInjection/App";
 import { App as App4 } from "./3HookInjection/App";
 
 import { ExamplePanel } from "../../meta/ExamplePanel";
+import { FullExample } from "../../meta/FullExample";
 
 const qc = new QueryClient();
 
 export function TodoListExample() {
 
 
-    return <>
+    return <FullExample>
 
         <QueryClientProvider client={qc}>
 
@@ -146,6 +147,6 @@ export function TodoListExample() {
                 <App4 />
             </ExamplePanel>
         </QueryClientProvider>
-    </>
+    </FullExample>
 }
 

@@ -1,5 +1,5 @@
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
-import { addWidget, getAllWidgets, Widget } from "./services/WidgetService";
+import { addWidget, getAllWidgets, Widget } from "./WidgetService";
 
 
 export function useWidgets() {
