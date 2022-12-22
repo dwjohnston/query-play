@@ -1,7 +1,7 @@
 
 import { useQuery } from '@tanstack/react-query';
 import React from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { useTodo, useUserForTodo } from './useServices';
 
 export type SingleTodoPageProps = {
@@ -23,6 +23,8 @@ export const SingleTodoPage = (props: SingleTodoPageProps) => {
   
   return (
     <div>
+
+      <Link to ="/todos">todos</Link>
 
         {todoQuery.isError && <span>Todo does not exist</span>}
 

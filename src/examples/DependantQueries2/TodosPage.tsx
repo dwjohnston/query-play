@@ -1,7 +1,7 @@
 
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { useTodos, useUsers } from './useServices';
+import { Link, useLoaderData } from 'react-router-dom';
+import { Todo, useTodos, useUsers } from './useServices';
 
 export type UsersPageProps = {
 };
@@ -12,20 +12,20 @@ export const TodosPage = (props: UsersPageProps) => {
     const { } = props;
 
 
-    const query = useTodos();
+    // const query = useTodos();
+
+    const data = useLoaderData() as Array<Todo>;
 
 
     return (
         <div>
 
 
-            {query.isLoading && <span>Loading...</span>}
-
-            {query.data?.map((v) => {
+            {data?.map((v) => {
                 return <div>
                     <Link to ={`/todos/${v.id}`}>{v.title}</Link>
                 </div>
-            })}
+            })} 
 
 
         </div>
