@@ -1,3 +1,6 @@
+
+Code for the blog post here: https://blacksheepcode.com/posts/why_i_dont_like_api_mocking
+
 # instructions
 
 ```
